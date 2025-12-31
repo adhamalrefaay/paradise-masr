@@ -19,8 +19,8 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body style="background-color: #c7e4ff">
-    <header class="container py-2">
+  <body style="background-color: #e5f0fa">
+    <header class="container py-2 sticky-lg-top sticky-md-top" id="mainHeader"  >
       <div class="text-dark d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center justify-content-between gap-2">
           <a href="" class="a"><i class="fa-brands fa-facebook"></i></a>
@@ -28,12 +28,12 @@
           <a href="" class="a"><i class="fa-brands fa-linkedin"></i></a>
           <a href="" class="a"><i class="fa-brands fa-youtube"></i></a>
         </div>
-        <div class="d-flex pe-5">
+        <div class="d-flex ">
           <div
             class="d-flex align-items-center justify-content-center gap-1 whats"
           >
             <a href="" class="a"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="" class="a"><p class="pt-2">+201115777344</p></a>
+            <a href="" class="a"><p class="pt-3">+201115777344</p></a>
           </div>
           <div
             class="d-flex align-items-center justify-content-center gap-1 ms-3"
@@ -42,13 +42,13 @@
               <i class="fa-regular fa-envelope-open"></i>
             </a>
             <a href="" class="a" id="smNone">
-              <p class="pt-2">info@paradise-masr.com</p>
+              <p class="pt-3">info@paradise-masr.com</p>
             </a>
           </div>
         </div>
       </div>
       <div class="divider"></div>
-      <div class="d-flex align-items-center justify-content-between pe-5 pt-1">
+      <div class="d-flex align-items-center justify-content-between  pt-1">
         <h1>Logo</h1>
         <nav
           class="d-flex gap-sm-0 gap-lg-5 gap-md-3 align-items-center justify-content-center"
@@ -85,8 +85,9 @@
       </div>
       <!-- From Uiverse.io by Cevorob -->
     </header>
-    <section class="hero-section position-relative">
-      <div class="hero position-absolute">
+
+    <section class="hero-section">
+      <div class="hero">
         <div class="Opacity">
           <div
             class="text-white container h-100 d-flex justify-content-center align-items-lg-start align-items-md pb-5 flex-column"
@@ -103,49 +104,10 @@
         </div>
       </div>
     </section>
-    <script>
-      let currentLang = "en";
 
-      const translations = {
-        en: {
-          home: "Home",
-          about: "About Us",
-          projects: "Our Projects",
-          equipment: "Equipment",
-          contact: "Contact Us",
-        },
-        ar: {
-          home: "الرئيسية",
-          about: "من نحن",
-          projects: "مشاريعنا",
-          equipment: "المعدات",
-          contact: "تواصل معنا",
-        },
-      };
 
-      function setLanguage(lang) {
-        document.documentElement.lang = lang;
-        document.body.dir = lang === "ar" ? "rtl" : "ltr";
-
-        document.querySelectorAll("[data-lang]").forEach((el) => {
-          const key = el.getAttribute("data-lang");
-          el.textContent = translations[lang][key];
-        });
-
-        document.getElementById("langBtn").textContent =
-          lang === "en" ? "AR" : "EN";
-
-        localStorage.setItem("lang", lang);
-        currentLang = lang;
-      }
-
-      function toggleLanguage() {
-        setLanguage(currentLang === "en" ? "ar" : "en");
-      }
-
-      // تحميل اللغة المحفوظة
-      const savedLang = localStorage.getItem("lang") || "en";
-      setLanguage(savedLang);
-    </script>
+    
+    <section style="background-color: #e5f0fa ; height: 100vh;">
+  </section>
   </body>
 </html>

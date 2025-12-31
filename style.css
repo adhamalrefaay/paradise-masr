@@ -8,9 +8,12 @@
 }
 body {
   background-color: #c7e4ff;
+  
 }
 header {
-  background-color: #c7e4ff;
+  background-color: #e5f0fa99;
+ border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 i {
   font-size: 24px;
@@ -80,8 +83,9 @@ i {
 
 @media (max-width: 767px) {
   header {
-    background-color: #0000006d;
+    background-color: #0082fc00;
     color: white;
+    
   }
   .a {
     color: white;
@@ -94,16 +98,17 @@ i {
   }
   .whats {
     /* background: #000; */
-    padding-left: 4rem;
+    padding-left: 6rem;
   }
   .divider {
     background-color: white;
   }
   .hero {
+    position: relative;
+    z-index: -1;
     top: -120px;
     height: 100vh;
 
-    z-index: -1;
   }
 
   .hero h1 {
@@ -144,6 +149,15 @@ i {
 @media (min-width: 768px) {
   .nav-item {
     font-size: 18px;
+  }
+  .heroTitle{
+    text-align: center;
+  }
+  .hero-text{
+    text-align: center;
+  }
+  .btns{
+    text-align: center; 
   }
   #lgNone {
     display: none;
