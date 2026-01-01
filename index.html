@@ -20,7 +20,7 @@
     />
   </head>
   <body style="background-color: #e5f0fa">
-    <header class="container py-2 sticky-lg-top sticky-md-top" id="mainHeader"  >
+    <header class="container py-2 sticky-lg-top sticky-md-top" id="mainHeader">
       <div class="text-dark d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center justify-content-between gap-2">
           <a href="" class="a"><i class="fa-brands fa-facebook"></i></a>
@@ -28,7 +28,7 @@
           <a href="" class="a"><i class="fa-brands fa-linkedin"></i></a>
           <a href="" class="a"><i class="fa-brands fa-youtube"></i></a>
         </div>
-        <div class="d-flex ">
+        <div class="d-flex">
           <div
             class="d-flex align-items-center justify-content-center gap-1 whats"
           >
@@ -48,34 +48,18 @@
         </div>
       </div>
       <div class="divider"></div>
-      <div class="d-flex align-items-center justify-content-between  pt-1">
-        <h1>Logo</h1>
+      <div class="d-flex align-items-center justify-content-between pt-1">
+        <img src="./ca93a0b32aeb6d62f11869999342a2a97564ac78.png" alt="" />
         <nav
           class="d-flex gap-sm-0 gap-lg-5 gap-md-3 align-items-center justify-content-center"
         >
-          <a href="" class="nav-item a">Home</a>
-          <a href="" class="a nav-item">About Us</a>
+          <a href="#home" class="nav-item a">Home</a>
+          <a href="#section2" class="a nav-item">About Us</a>
           <a href="" class="a nav-item">Our Projects</a>
           <a href="" class="a nav-item">quipment</a>
-          <button class="btn btn-dark" id="headerBtn">Contact Us</button>
+          <button class="headerBtn" id="headerBtn">Contact Us</button>
           <a href="" class="a nav-item">ع</a>
         </nav>
-        <!-- <nav class="d-flex gap-5">
-          <a href="" class="nav-item a" data-lang="home"></a>
-          <a href="" class="a nav-item" data-lang="about"></a>
-          <a href="" class="a nav-item" data-lang="projects"></a>
-          <a href="" class="a nav-item" data-lang="equipment"></a>
-          <button class="btn btn-info" data-lang="contact"></button>
-
-        
-          <a
-            href="javascript:void(0)"
-            class="a nav-item"
-            onclick="toggleLanguage()"
-            id="langBtn"
-            >ع</a
-          >
-        </nav> -->
         <label class="burger" id="lgNone" for="burger">
           <input type="checkbox" id="burger" />
           <span></span>
@@ -86,7 +70,7 @@
       <!-- From Uiverse.io by Cevorob -->
     </header>
 
-    <section class="hero-section">
+    <section class="hero-section" id="home">
       <div class="hero">
         <div class="Opacity">
           <div
@@ -104,10 +88,104 @@
         </div>
       </div>
     </section>
+    <section class="section2 container pt-5 pb-5" id="section2">
+      <h1 class="text-center pb-4">About Us</h1>
+      <div class="d-flex justify-content-between align-items-center gap-5 pb-5 div">
+        <div class="text col-lg-6 col-md-4 col-sm-1">
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Tincidunt imperdiet ultrices
+            sit porttitor. Mus vel iaculis senectus et. Neque lectus turpis
+            vulputate sed aliquet pellentesque.
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-4">
+          <img src="./Rectangle 70.png" alt="" />
+        </div>
+      </div>
+    </section>
 
 
-    
-    <section style="background-color: #e5f0fa ; height: 100vh;">
-  </section>
+    <div style="background-color: #0277ba" class="bg-counter py-5">
+  <div class="container">
+    <div class="row text-center">
+
+      <div class="col-12 col-md-3 mb-4">
+        <h2 class="counter" data-target="150">0</h2>
+        <h1>Projects</h1>
+      </div>
+
+      <div class="col-12 col-md-3 mb-4">
+        <h2 class="counter" data-target="300">0</h2>
+        <h1>Clients</h1>
+      </div>
+
+      <div class="col-12 col-md-3 mb-4">
+        <h2 class="counter" data-target="25">0</h2>
+        <h1>Years</h1>
+      </div>
+
+      <div class="col-12 col-md-3 mb-4">
+        <h2 class="counter" data-target="1200">0</h2>
+       <h1>Hours</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section id="section3 " class="container pt-5">
+<h1 class="text-center pb-5">Our Projects</h1>
+<div class="d-flex justify-content-between align-items-center flex-wrap">
+  <img class="col-lg-3 col-md-3 col-sm-12 pb-3" src="./Rectangle 70.png" alt="">
+  <img class="col-lg-3 col-md-3 col-sm-12 pb-3" src="./Rectangle 70.png" alt="">
+  <img class="col-lg-3 col-md-3 col-sm-12 pb-3" src="./Rectangle 70.png" alt="">
+</div>
+<div class="text-center">
+<button class="headerBtn w-25 ">Show More</button>
+</div>
+</section>
+
+
+
+
+
+
+
+    <section style="background-color: #e5f0fa; height: 100vh"></section>
+    <script>
+      const counters = document.querySelectorAll(".counter");
+
+      const startCounter = (counter) => {
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
+        const speed = 200; // كل ما الرقم أقل، أسرع
+
+        const update = () => {
+          const increment = target / speed;
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.ceil(count);
+            requestAnimationFrame(update);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        update();
+      };
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              startCounter(entry.target);
+              observer.unobserve(entry.target); // يعد مرة واحدة
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      counters.forEach((counter) => observer.observe(counter));
+    </script>
   </body>
 </html>
